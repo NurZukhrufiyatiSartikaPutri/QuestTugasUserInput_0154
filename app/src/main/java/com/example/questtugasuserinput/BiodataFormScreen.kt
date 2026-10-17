@@ -221,8 +221,25 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                 singleLine = true
                             )
 
+                            DropdownMenu(
+                                expanded = expandedExperience,
+                                onDismissRequest = { expandedExperience = false }
+                            ) {
+                                experienceOptions.forEach { option ->
+                                    DropdownMenuItem(
+                                        text = { Text(option) },
+                                        onClick = {
+                                            experience = option
+                                            expandedExperience = false
+                                        }
+                                    )
+                                }
+                            }
                         }
                     }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
                 }
             }
         }

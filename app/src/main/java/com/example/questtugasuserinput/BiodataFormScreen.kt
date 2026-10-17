@@ -204,7 +204,9 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                 enabled = true,
                                 label = { Text(stringResource(id = R.string.experience)) },
                                 trailingIcon = {
-                                    IconButton(onClick = { expandedExperience = !expandedExperience }) {
+                                    IconButton(onClick = {
+                                        expandedExperience = !expandedExperience
+                                    }) {
                                         Icon(
                                             imageVector = Icons.Default.ArrowDropDown,
                                             contentDescription = null,
@@ -212,6 +214,13 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                         )
                                     }
                                 },
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { expandedExperience = !expandedExperience },
+                                shape = RoundedCornerShape(16.dp),
+                                singleLine = true
+                            )
+
                         }
                     }
                 }

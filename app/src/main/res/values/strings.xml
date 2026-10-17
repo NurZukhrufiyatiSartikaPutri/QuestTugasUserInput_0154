@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">QuestTugasUserInput</string>
+    <string name="form_title">Form Biodata</string>
+    <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="nama_depan">Nama Depan</string>
+    <string name="nama_belakang">Nama Belakang</string>
+    <string name="email">Email</string>
+    <string name="tgl_lahir">Tgl Lahir</string>
+    <string name="experience">Experience</string>
+    <string name="pilih_skill">Pilih Skill Anda :</string>
+    <string name="skill_android">Android</string>
+    <string name="skill_ui_ux">UI/UX</string>
+    <string name="skill_web">Web</string>
+    <string name="proceed">Proceed</string>
+    <string name="data_pendaftaran_berhasil">Data Pendaftaran Berhasil</string>
+    <string name="label_nama">Nama: </string>
+    <string name="label_tgl_lahir">Tgl Lahir: </string>
+    <string name="label_pengalaman">Pengalaman: </string>
+    <string name="label_email">Email: </string>
+    <string name="label_skills">Skills: </string>
+</resources>

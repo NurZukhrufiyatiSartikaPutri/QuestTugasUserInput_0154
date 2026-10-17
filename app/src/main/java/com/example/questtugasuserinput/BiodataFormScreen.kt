@@ -295,6 +295,25 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
 
                     Spacer(modifier = Modifier.height(24.dp))
 
+                    // Proceed Button
+                    Button(
+                        onClick = { isSubmitted = true },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
+                        shape = RoundedCornerShape(16.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.button_bg)
+                        )
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.proceed),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = colorResource(id = R.color.white)
+                        )
+                    }
+
                 }
             }
         }

@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.questtugasuserinput.ui.theme.QuestTugasUserInputTheme
 import java.util.Calendar
-import androidx.compose.foundation.layout.navigationBarsPadding
+
 
 @Composable
 fun BiodataFormScreen(modifier: Modifier = Modifier) {
@@ -204,9 +204,7 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                 enabled = true,
                                 label = { Text(stringResource(id = R.string.experience)) },
                                 trailingIcon = {
-                                    IconButton(onClick = {
-                                        expandedExperience = !expandedExperience
-                                    }) {
+                                    IconButton(onClick = { expandedExperience = !expandedExperience }) {
                                         Icon(
                                             imageVector = Icons.Default.ArrowDropDown,
                                             contentDescription = null,
@@ -263,10 +261,7 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                     checked = androidChecked,
                                     onCheckedChange = { androidChecked = it }
                                 )
-                                Text(
-                                    text = stringResource(id = R.string.skill_android),
-                                    fontSize = 12.sp
-                                )
+                                Text(text = stringResource(id = R.string.skill_android), fontSize = 12.sp)
                             }
 
                             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -274,10 +269,7 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                     checked = uiUxChecked,
                                     onCheckedChange = { uiUxChecked = it }
                                 )
-                                Text(
-                                    text = stringResource(id = R.string.skill_ui_ux),
-                                    fontSize = 12.sp
-                                )
+                                Text(text = stringResource(id = R.string.skill_ui_ux), fontSize = 12.sp)
                             }
 
                             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -285,10 +277,7 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                     checked = webChecked,
                                     onCheckedChange = { webChecked = it }
                                 )
-                                Text(
-                                    text = stringResource(id = R.string.skill_web),
-                                    fontSize = 12.sp
-                                )
+                                Text(text = stringResource(id = R.string.skill_web), fontSize = 12.sp)
                             }
                         }
                     }
@@ -322,8 +311,7 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                         if (androidChecked) skillsList.add(stringResource(id = R.string.skill_android))
                         if (uiUxChecked) skillsList.add(stringResource(id = R.string.skill_ui_ux))
                         if (webChecked) skillsList.add(stringResource(id = R.string.skill_web))
-                        val skillsStr =
-                            if (skillsList.isEmpty()) "-" else skillsList.joinToString(", ")
+                        val skillsStr = if (skillsList.isEmpty()) "-" else skillsList.joinToString(", ")
 
                         Card(
                             modifier = Modifier.fillMaxWidth(),
@@ -346,37 +334,23 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
 
                                 Spacer(modifier = Modifier.height(8.dp))
 
-                                Text(
-                                    text = "${stringResource(id = R.string.label_nama)}$namaDepan $namaBelakang",
-                                    color = colorResource(id = R.color.white),
-                                    fontSize = 14.sp
-                                )
-                                Text(
-                                    text = "${stringResource(id = R.string.label_tgl_lahir)}$tglLahir",
-                                    color = colorResource(id = R.color.white),
-                                    fontSize = 14.sp
-                                )
-                                Text(
-                                    text = "${stringResource(id = R.string.label_pengalaman)}$experience",
-                                    color = colorResource(id = R.color.white),
-                                    fontSize = 14.sp
-                                )
-                                Text(
-                                    text = "${stringResource(id = R.string.label_email)}$email",
-                                    color = colorResource(id = R.color.white),
-                                    fontSize = 14.sp
-                                )
-                                Text(
-                                    text = "${stringResource(id = R.string.label_skills)}$skillsStr",
-                                    color = colorResource(id = R.color.white),
-                                    fontSize = 14.sp
-                                )
+                                Text(text = "${stringResource(id = R.string.label_nama)}$namaDepan $namaBelakang", color = colorResource(id = R.color.white), fontSize = 14.sp)
+                                Text(text = "${stringResource(id = R.string.label_tgl_lahir)}$tglLahir", color = colorResource(id = R.color.white), fontSize = 14.sp)
+                                Text(text = "${stringResource(id = R.string.label_pengalaman)}$experience", color = colorResource(id = R.color.white), fontSize = 14.sp)
+                                Text(text = "${stringResource(id = R.string.label_email)}$email", color = colorResource(id = R.color.white), fontSize = 14.sp)
+                                Text(text = "${stringResource(id = R.string.label_skills)}$skillsStr", color = colorResource(id = R.color.white), fontSize = 14.sp)
                             }
                         }
                     }
 
+                    Spacer(
+                        modifier = Modifier
+                            .height(48.dp)
+                            .navigationBarsPadding()
+                    )
                 }
             }
         }
     }
 }
+

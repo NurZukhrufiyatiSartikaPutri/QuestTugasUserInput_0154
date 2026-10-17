@@ -88,5 +88,15 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
         ) {
             Spacer(modifier = Modifier.height(200.dp))
 
+            Surface(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
+                shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
+                color = colorResource(id = R.color.white),
+                shadowElevation = 8.dp
+            ) {
+            }
         }
-    }}
+    }
+}

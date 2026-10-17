@@ -354,3 +354,10 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun BiodataFormPreview() {
+    QuestTugasUserInputTheme {
+        BiodataFormScreen()
+    }
+}

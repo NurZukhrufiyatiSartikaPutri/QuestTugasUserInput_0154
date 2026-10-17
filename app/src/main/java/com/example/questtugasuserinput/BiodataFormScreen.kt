@@ -96,6 +96,20 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                 color = colorResource(id = R.color.white),
                 shadowElevation = 8.dp
             ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(24.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.form_title),
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.purple_heading)
+                    )
+
+                }
             }
         }
     }

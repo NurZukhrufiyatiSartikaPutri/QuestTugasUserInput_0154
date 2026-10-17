@@ -69,4 +69,15 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
     val experienceOptions = listOf("< 1 tahun", "1 - 3 tahun", "> 3 tahun")
     val scrollState = rememberScrollState()
 
-}
+    Box(modifier = modifier.fillMaxSize().background(colorResource(id = R.color.white))) {
+        // Top Background Image
+        Image(
+            painter = painterResource(id = R.drawable.gambar),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(300.dp),
+            contentScale = ContentScale.Crop
+        )
+
+    }}

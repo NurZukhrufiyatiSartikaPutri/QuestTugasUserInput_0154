@@ -325,6 +325,27 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                         val skillsStr =
                             if (skillsList.isEmpty()) "-" else skillsList.joinToString(", ")
 
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(16.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = colorResource(id = R.color.dark_summary_bg)
+                            )
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(16.dp)
+                            ) {
+                                Text(
+                                    text = stringResource(id = R.string.data_pendaftaran_berhasil),
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 16.sp,
+                                    color = colorResource(id = R.color.white)
+                                )
+
+                            }
+                        }
                     }
                 }
             }

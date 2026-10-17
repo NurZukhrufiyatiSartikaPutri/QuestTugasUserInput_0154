@@ -197,6 +197,21 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                 .weight(1f)
                                 .clickable { expandedExperience = !expandedExperience }
                         ) {
+                            OutlinedTextField(
+                                value = experience,
+                                onValueChange = { },
+                                readOnly = true,
+                                enabled = true,
+                                label = { Text(stringResource(id = R.string.experience)) },
+                                trailingIcon = {
+                                    IconButton(onClick = { expandedExperience = !expandedExperience }) {
+                                        Icon(
+                                            imageVector = Icons.Default.ArrowDropDown,
+                                            contentDescription = null,
+                                            tint = colorResource(id = R.color.purple_heading)
+                                        )
+                                    }
+                                },
                         }
                     }
                 }

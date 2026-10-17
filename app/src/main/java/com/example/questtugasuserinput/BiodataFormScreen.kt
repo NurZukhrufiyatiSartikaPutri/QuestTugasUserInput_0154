@@ -280,8 +280,21 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                 )
                             }
 
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Checkbox(
+                                    checked = webChecked,
+                                    onCheckedChange = { webChecked = it }
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.skill_web),
+                                    fontSize = 12.sp
+                                )
+                            }
                         }
                     }
+
+                    Spacer(modifier = Modifier.height(24.dp))
+
                 }
             }
         }

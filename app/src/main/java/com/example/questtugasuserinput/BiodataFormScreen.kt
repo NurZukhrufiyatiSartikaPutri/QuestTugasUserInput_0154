@@ -80,4 +80,13 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop
         )
 
+        // Floating Card / Box over Scaffold
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(scrollState)
+        ) {
+            Spacer(modifier = Modifier.height(200.dp))
+
+        }
     }}

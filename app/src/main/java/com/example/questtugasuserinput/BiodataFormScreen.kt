@@ -157,6 +157,41 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
 
                     Spacer(modifier = Modifier.height(16.dp))
 
+                    // Tgl Lahir & Experience
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        // Tgl Lahir Field
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { showDatePicker = true }
+                        ) {
+                            OutlinedTextField(
+                                value = tglLahir,
+                                onValueChange = { },
+                                readOnly = true,
+                                enabled = true,
+                                label = { Text(stringResource(id = R.string.tgl_lahir)) },
+                                trailingIcon = {
+                                    IconButton(onClick = { showDatePicker = true }) {
+                                        Icon(
+                                            imageVector = Icons.Default.DateRange,
+                                            contentDescription = null,
+                                            tint = colorResource(id = R.color.purple_heading)
+                                        )
+                                    }
+                                },
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { showDatePicker = true },
+                                shape = RoundedCornerShape(16.dp),
+                                singleLine = true
+                            )
+                        }
+
+                    }
                 }
             }
         }

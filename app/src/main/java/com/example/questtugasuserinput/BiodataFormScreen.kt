@@ -109,6 +109,16 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                         color = colorResource(id = R.color.purple_heading)
                     )
 
+                    Spacer(modifier = Modifier.height(4.dp))
+
+                    Text(
+                        text = stringResource(id = R.string.form_subtitle),
+                        fontSize = 12.sp,
+                        color = colorResource(id = R.color.teal_700)
+                    )
+
+                    Spacer(modifier = Modifier.height(24.dp))
+
                 }
             }
         }

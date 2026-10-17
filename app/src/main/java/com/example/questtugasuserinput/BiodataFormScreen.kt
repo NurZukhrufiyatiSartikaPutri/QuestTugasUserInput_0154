@@ -145,6 +145,18 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
 
                     Spacer(modifier = Modifier.height(16.dp))
 
+                    // Email
+                    OutlinedTextField(
+                        value = email,
+                        onValueChange = { email = it },
+                        label = { Text(stringResource(id = R.string.email)) },
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(16.dp),
+                        singleLine = true
+                    )
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
                 }
             }
         }

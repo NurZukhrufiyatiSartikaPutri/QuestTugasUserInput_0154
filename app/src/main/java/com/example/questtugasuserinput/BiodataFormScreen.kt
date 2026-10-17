@@ -28,3 +28,26 @@ import com.example.questtugasuserinput.ui.theme.QuestTugasUserInputTheme
 import java.util.Calendar
 import androidx.compose.foundation.layout.navigationBarsPadding
 
+@Composable
+fun BiodataFormScreen(modifier: Modifier = Modifier) {
+    var namaDepan by remember { mutableStateOf("") }
+    var namaBelakang by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var tglLahir by remember { mutableStateOf("") }
+    var experience by remember { mutableStateOf("") }
+
+    var androidChecked by remember { mutableStateOf(false) }
+    var uiUxChecked by remember { mutableStateOf(false) }
+    var webChecked by remember { mutableStateOf(false) }
+
+    var isSubmitted by remember { mutableStateOf(false) }
+    var expandedExperience by remember { mutableStateOf(false) }
+    var showDatePicker by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val calendar = Calendar.getInstance()
+    val year = calendar.get(Calendar.YEAR)
+    val month = calendar.get(Calendar.MONTH)
+    val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+}

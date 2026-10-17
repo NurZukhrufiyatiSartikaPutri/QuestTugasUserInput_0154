@@ -344,9 +344,37 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                                     color = colorResource(id = R.color.white)
                                 )
 
+                                Spacer(modifier = Modifier.height(8.dp))
+
+                                Text(
+                                    text = "${stringResource(id = R.string.label_nama)}$namaDepan $namaBelakang",
+                                    color = colorResource(id = R.color.white),
+                                    fontSize = 14.sp
+                                )
+                                Text(
+                                    text = "${stringResource(id = R.string.label_tgl_lahir)}$tglLahir",
+                                    color = colorResource(id = R.color.white),
+                                    fontSize = 14.sp
+                                )
+                                Text(
+                                    text = "${stringResource(id = R.string.label_pengalaman)}$experience",
+                                    color = colorResource(id = R.color.white),
+                                    fontSize = 14.sp
+                                )
+                                Text(
+                                    text = "${stringResource(id = R.string.label_email)}$email",
+                                    color = colorResource(id = R.color.white),
+                                    fontSize = 14.sp
+                                )
+                                Text(
+                                    text = "${stringResource(id = R.string.label_skills)}$skillsStr",
+                                    color = colorResource(id = R.color.white),
+                                    fontSize = 14.sp
+                                )
                             }
                         }
                     }
+
                 }
             }
         }

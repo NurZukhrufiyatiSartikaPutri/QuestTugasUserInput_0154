@@ -191,6 +191,13 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                             )
                         }
 
+                        // Experience Dropdown Field
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { expandedExperience = !expandedExperience }
+                        ) {
+                        }
                     }
                 }
             }

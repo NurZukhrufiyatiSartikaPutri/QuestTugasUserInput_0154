@@ -50,4 +50,20 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
     val month = calendar.get(Calendar.MONTH)
     val day = calendar.get(Calendar.DAY_OF_MONTH)
 
+    if (showDatePicker) {
+        LaunchedEffect(showDatePicker) {
+            val dialog = DatePickerDialog(
+                context,
+                { _, selectedYear, selectedMonth, selectedDay ->
+                    tglLahir = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+                    showDatePicker = false
+                },
+                year, month, day
+            )
+            dialog.setOnCancelListener { showDatePicker = false }
+            dialog.setOnDismissListener { showDatePicker = false }
+            dialog.show()
+        }
+    }
+
 }

@@ -66,4 +66,7 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
         }
     }
 
+    val experienceOptions = listOf("< 1 tahun", "1 - 3 tahun", "> 3 tahun")
+    val scrollState = rememberScrollState()
+
 }

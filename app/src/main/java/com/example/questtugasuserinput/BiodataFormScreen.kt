@@ -314,6 +314,18 @@ fun BiodataFormScreen(modifier: Modifier = Modifier) {
                         )
                     }
 
+                    // Summary Box (Dark Box) appearing after submit
+                    if (isSubmitted) {
+                        Spacer(modifier = Modifier.height(24.dp))
+
+                        val skillsList = mutableListOf<String>()
+                        if (androidChecked) skillsList.add(stringResource(id = R.string.skill_android))
+                        if (uiUxChecked) skillsList.add(stringResource(id = R.string.skill_ui_ux))
+                        if (webChecked) skillsList.add(stringResource(id = R.string.skill_web))
+                        val skillsStr =
+                            if (skillsList.isEmpty()) "-" else skillsList.joinToString(", ")
+
+                    }
                 }
             }
         }
